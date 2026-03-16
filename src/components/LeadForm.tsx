@@ -132,7 +132,7 @@ function LeadForm() {
                                             className="text-red-500 text-sm"
                                         />
 
-                                        <label htmlFor="phone" className="sr-only">Name</label>
+                                        <label htmlFor="phone" className="sr-only">Phone</label>
                                         <Field
                                             type="text"
                                             id="phone"
