@@ -12,125 +12,99 @@ const Packages = () => {
                     <h2 className="text-my-black text-4xl md:text-6xl font-bold">Packages</h2>
                     <p className="text-lg max-w-xl">Scalable investment tiers for every stage of your creative evolution.</p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
                     
-                    {/* Starter Tier */}
-                    <div className="relative p-6 md:p-10 rounded-4xl ring ring-my-gray/20 flex flex-col gap-4 md:gap-5 hover:shadow-md hover:ring-my-blue/60 hover:shadow-my-gray/20 transition-all duration-300 group">
-                        <div className="p-4 rounded-3xl bg-my-green/15 w-max">
-                            <Image src="/images/start.png" alt="" width={35} height={35} />
+                    {/* Starter */}
+                    <div className="relative p-6 rounded-4xl ring ring-my-gray/20 flex flex-col gap-4 hover:shadow-md hover:ring-my-blue/60 transition-all duration-300">
+                        <div className="p-3 rounded-2xl bg-my-gray/10 w-max">
+                            <Image src="/images/start.png" alt="" width={28} height={28} />
                         </div>
-                        <h3 className="font-bold text-3xl text-my-black">Starter</h3>
-                        <p>For early-stage creators ready to step into a structured production space.</p>
-                        <div className="flex flex-col gap-3 mt-2">
-                            {[
-                                "Clean Wall Background",
-                                "Tripod setup",
-                                "Microphone for clear audio",
-                                "Ring light setup"
-                            ].map((item) => (
+                        <h3 className="font-bold text-2xl text-my-black">Starter</h3>
+                        <p className="text-sm text-my-gray">For early-stage creators ready to step into a structured production space.</p>
+                        <div className="flex flex-col gap-3 my-2">
+                            {["One Wall Background Access", "Tripod setup", "Microphone for clear audio", "Ring light setup"].map((item) => (
                                 <div key={item} className="flex items-center gap-2">
-                                    <div className="bg-my-green w-max p-1 rounded-2xl">
-                                        <Check size={13} className="text-white" />
-                                    </div>
-                                    <p className="text-[15px]">{item}</p>
+                                    <div className="bg-my-green w-max p-1 rounded-full"><Check size={10} className="text-white" /></div>
+                                    <p className="text-[13px]">{item}</p>
                                 </div>
                             ))}
                         </div>
-                        <div className="flex flex-col gap-1 mt-auto">
-                            <p className="text-sm text-my-gray/80 uppercase tracking-wider">Best For</p>
-                            <p className="font-semibold text-sm">Simple talking videos, practice shoots, and entry-level content.</p>
+                        <div className="mt-auto pt-4 border-t border-my-gray/10">
+                            <p className="text-[10px] text-my-gray font-bold uppercase">Best For</p>
+                            <p className="text-[12px] leading-tight mt-1">Simple talking videos, practice shoots, and entry-level content creation.</p>
                         </div>
-                        <p className="text-my-black mt-4 text-4xl font-bold">₦40k<span className="text-my-gray text-base font-normal">/session</span></p>
-                        <button onClick={() => scrollToId('booking')} className="font-semibold text-my-white hover:text-my-black hover:ring hover:ring-my-black w-full rounded-full p-3 bg-my-black hover:bg-my-white transition-colors duration-300">Inquire Now</button>
+                        <p className="text-my-black mt-4 text-3xl font-bold">₦25,000 <span className="text-my-gray text-xs font-normal">/ Hour</span></p>
+                        <button onClick={() => scrollToId('booking')} className="font-semibold text-my-black ring-1 ring-my-black/10 w-full rounded-full p-3 bg-my-gray/5 hover:bg-my-black hover:text-white transition-all duration-300">Inquire Now</button>
                     </div>
 
-                    {/* Creator Tier */}
-                    <div className="relative p-6 md:p-10 rounded-4xl ring ring-my-gray/20 flex flex-col gap-4 md:gap-5 hover:shadow-md hover:ring-my-blue/60 hover:shadow-my-gray/20 transition-all duration-300 group">
-                        <div className="p-4 rounded-3xl bg-my-blue/10 w-max">
-                            <Image src="/images/medal.png" alt="" width={35} height={35} />
+                    {/* Creator */}
+                    <div className="relative p-6 rounded-4xl ring ring-my-gray/20 flex flex-col gap-4 hover:shadow-md hover:ring-my-blue/60 transition-all duration-300">
+                        <div className="p-3 rounded-2xl bg-orange-100 w-max">
+                            <Image src="/images/medal.png" alt="" width={28} height={28} />
                         </div>
-                        <h3 className="font-bold text-3xl text-my-black">Creator</h3>
-                        <p>For creators ready to produce professional-looking content consistently.</p>
-                        <div className="flex flex-col gap-3 mt-2">
-                            {[
-                                "Everything in Starter",
-                                "Professional camera for high-quality visuals",
-                                "Custom Lighting setup"
-                            ].map((item) => (
+                        <h3 className="font-bold text-2xl text-my-black">Creator</h3>
+                        <p className="text-sm text-my-gray">For creators ready to produce professional-looking content consistently.</p>
+                        <div className="flex flex-col gap-3 my-2">
+                            {["Full Room Access", "Everything in Starter", "Professional camera for high-quality visuals", "Ideal for controlled, single-environment shoots"].map((item) => (
                                 <div key={item} className="flex items-center gap-2">
-                                    <div className="bg-my-green w-max p-1 rounded-2xl">
-                                        <Check size={13} className="text-white" />
-                                    </div>
-                                    <p className="text-[15px]">{item}</p>
+                                    <div className="bg-my-green w-max p-1 rounded-full"><Check size={10} className="text-white" /></div>
+                                    <p className="text-[13px]">{item}</p>
                                 </div>
                             ))}
                         </div>
-                        <div className="flex flex-col gap-1 mt-auto">
-                            <p className="text-sm text-my-gray/80 uppercase tracking-wider">Best For</p>
-                            <p className="font-semibold text-sm">YouTube videos, brand content, and authority building.</p>
+                        <div className="mt-auto pt-4 border-t border-my-gray/10">
+                            <p className="text-[10px] text-my-gray font-bold uppercase">Best For</p>
+                            <p className="text-[12px] leading-tight mt-1">YouTube videos, brand content, and social media authority building.</p>
                         </div>
-                        <p className="text-my-black mt-4 text-4xl font-bold">₦100k<span className="text-my-gray text-base font-normal">/session</span></p>
-                        <button onClick={() => scrollToId('booking')} className="font-semibold text-my-white hover:text-my-black hover:ring hover:ring-my-black w-full rounded-full p-3 bg-my-black hover:bg-my-white transition-colors duration-300">Inquire Now</button>
+                        <p className="text-my-black mt-4 text-3xl font-bold">₦80,000 <span className="text-my-gray text-xs font-normal">/ Hour</span></p>
+                        <button onClick={() => scrollToId('booking')} className="font-semibold text-my-black ring-1 ring-my-black/10 w-full rounded-full p-3 bg-my-gray/5 hover:bg-my-black hover:text-white transition-all duration-300">Inquire Now</button>
                     </div>
 
-                    {/* Professional Tier */}
-                    <div className="relative p-6 md:p-10 rounded-4xl ring ring-my-gray/20 flex flex-col gap-4 md:gap-5 hover:shadow-md hover:ring-my-blue/60 hover:shadow-my-gray/20 transition-all duration-300 group border-2 border-my-blue/20">
-                        <div className="p-4 rounded-3xl bg-yellow-100 w-max">
-                            <Image src="/images/wand.png" alt="" width={35} height={35} />
+                    {/* Professional - Best Value */}
+                    <div className="relative p-6 rounded-4xl ring-2 ring-my-blue flex flex-col gap-4 shadow-xl shadow-my-blue/10 scale-105 z-10 bg-white transition-all duration-300">
+                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-my-blue text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-widest">Best Value</div>
+                        <div className="p-3 rounded-2xl bg-blue-50 w-max">
+                            <Image src="/images/wand.png" alt="" width={28} height={28} />
                         </div>
-                        <h3 className="font-bold text-3xl text-my-black">Professional</h3>
-                        <p>For individuals building a high-end, serious brand presence.</p>
-                        <div className="flex flex-col gap-3 mt-2">
-                            {[
-                                "Everything in Creator",
-                                "Content consultation & direction",
-                                "Advanced audio (Lavalier/Boom mics)",
-                                "Basic editing (titles/cuts)"
-                            ].map((item) => (
+                        <h3 className="font-bold text-2xl text-my-black">Professional</h3>
+                        <p className="text-sm text-my-gray">For individuals building a serious brand presence with variety.</p>
+                        <div className="flex flex-col gap-3 my-2">
+                            {["2 Room Access", "Everything in Creator", "Content consultation", "Dynamic angles across two studio environments"].map((item) => (
                                 <div key={item} className="flex items-center gap-2">
-                                    <div className="bg-my-green w-max p-1 rounded-2xl">
-                                        <Check size={13} className="text-white" />
-                                    </div>
-                                    <p className="text-[15px]">{item}</p>
+                                    <div className="bg-my-green w-max p-1 rounded-full"><Check size={10} className="text-white" /></div>
+                                    <p className="text-[13px]">{item}</p>
                                 </div>
                             ))}
                         </div>
-                        <div className="flex flex-col gap-1 mt-auto">
-                            <p className="text-sm text-my-gray/80 uppercase tracking-wider">Best For</p>
-                            <p className="font-semibold text-sm">Thought leaders, coaches, and expert authority content.</p>
+                        <div className="mt-auto pt-4 border-t border-my-gray/10">
+                            <p className="text-[10px] text-my-gray font-bold uppercase">Best For</p>
+                            <p className="text-[12px] leading-tight mt-1">Thought leaders, coaches, and experts building authority-driven content.</p>
                         </div>
-                        <p className="text-my-black mt-4 text-4xl font-bold">₦200k<span className="text-my-gray text-base font-normal">/session</span></p>
-                        <button onClick={() => scrollToId('booking')} className="font-semibold text-my-white hover:text-my-black hover:ring hover:ring-my-black w-full rounded-full p-3 bg-my-black hover:bg-my-white transition-colors duration-300">Inquire Now</button>
+                        <p className="text-my-blue mt-4 text-3xl font-bold">₦100,000 <span className="text-my-gray text-xs font-normal">/ Hour</span></p>
+                        <button onClick={() => scrollToId('booking')} className="font-semibold text-white w-full rounded-full p-3 bg-my-blue hover:bg-my-blue/90 transition-all duration-300 shadow-lg shadow-my-blue/30">Select Alpha</button>
                     </div>
 
-                    {/* Enterprise / Custom Tier */}
-                    <div className="relative p-6 md:p-10 rounded-4xl ring ring-my-gray/20 flex flex-col gap-4 md:gap-5 hover:shadow-md hover:ring-my-blue/60 hover:shadow-my-gray/20 transition-all duration-300 group">
-                        <div className="p-4 rounded-3xl bg-purple-100 w-max">
-                            <CircleStar size={35} className="text-purple-500" />
+                    {/* Enterprise */}
+                    <div className="relative p-6 rounded-4xl ring ring-my-gray/20 flex flex-col gap-4 hover:shadow-md hover:ring-my-blue/60 transition-all duration-300">
+                        <div className="p-3 rounded-2xl bg-purple-100 w-max">
+                            <CircleStar size={28} className="text-purple-500" />
                         </div>
-                        <h3 className="font-bold text-3xl text-my-black">Enterprise</h3>
-                        <p>Tailored solutions for teams, brands, and large-scale media houses.</p>
-                        <div className="flex flex-col gap-3 mt-2">
-                            {[
-                                "Multi-camera & Multi-mic setups",
-                                "Full production crew support",
-                                "Premium post-production & VFX",
-                                "Monthly content planning"
-                            ].map((item) => (
+                        <h3 className="font-bold text-2xl text-my-black">Enterprise</h3>
+                        <p className="text-sm text-my-gray">For teams and organizations requiring the ultimate studio experience.</p>
+                        <div className="flex flex-col gap-3 my-2">
+                            {["All Room Access (Full Studio)", "Everything in Professional", "Multiple microphones (for group recordings)", "Multi-camera setup (for multiple angles)"].map((item) => (
                                 <div key={item} className="flex items-center gap-2">
-                                    <div className="bg-my-green w-max p-1 rounded-2xl">
-                                        <Check size={13} className="text-white" />
-                                    </div>
-                                    <p className="text-[15px]">{item}</p>
+                                    <div className="bg-my-green w-max p-1 rounded-full"><Check size={10} className="text-white" /></div>
+                                    <p className="text-[13px]">{item}</p>
                                 </div>
                             ))}
                         </div>
-                        <div className="flex flex-col gap-1 mt-auto">
-                            <p className="text-sm text-my-gray/80 uppercase tracking-wider">Best For</p>
-                            <p className="font-semibold text-sm">Panel discussions, corporate series, and media houses.</p>
+                        <div className="mt-auto pt-4 border-t border-my-gray/10">
+                            <p className="text-[10px] text-my-gray font-bold uppercase">Best For</p>
+                            <p className="text-[12px] leading-tight mt-1">Panel discussions, interviews, corporate content, and large-scale production.</p>
                         </div>
-                        <p className="text-my-black mt-4 text-4xl font-bold">Bespoke</p>
-                        <button onClick={() => scrollToId('booking')} className="font-semibold text-my-white hover:text-my-black hover:ring hover:ring-my-black w-full rounded-full p-3 bg-my-black hover:bg-my-white transition-colors duration-300">Contact Us</button>
+                        <p className="text-my-black mt-4 text-3xl font-bold">₦150,000 <span className="text-my-gray text-xs font-normal">/ Hour</span></p>
+                        <button onClick={() => scrollToId('booking')} className="font-semibold text-my-black ring-1 ring-my-black/10 w-full rounded-full p-3 bg-my-gray/5 hover:bg-my-black hover:text-white transition-all duration-300">Inquire Now</button>
                     </div>
 
                 </div>
